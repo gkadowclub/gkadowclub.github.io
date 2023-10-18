@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>g.kadow.club</title>
+    <style>
+        body {
+            background-color: #8fcbbf;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #201e1e;
+        }
+
+        .main-content {
+            text-align: left;
+            padding: 20px;
+        }
+
+        .logo {
+            max-width: 100%;
+            height: auto;
+            margin: 0 auto;
+            display: block;
+        }
+
+        .coupon-text {
+            font-size: 18px;
+            line-height: 1.5;
+        }
+
+        .coupon-button {
+            background-color: white;
+            color: #8fcbbf;
+            border: 2px solid white;
+            padding: 15px 30px;
+            cursor: pointer;
+            border-radius: 8px;
+            margin-top: 20px;
+            font-size: 16px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .conditions-text {
+            margin-top: 20px;
+            font-size: 16px;
+        }
+
+        .reference-text {
+            margin-top: 20px;
+            font-size: 14px;
+        }
+
+        strong {
+            text-decoration: underline;
+            font-weight: bold;
+        }
+
+        /* Styles for the pop-up */
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background-color: white;
+            border: 2px solid #8fcbbf;
+            border-radius: 8px;
+            z-index: 2;
+        }
+
+        .popup-content {
+            margin-bottom: 20px;
+        }
+
+        .popup-input {
+            padding: 10px;
+            width: 100%;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+        }
+
+        .popup-button {
+            background-color: #8fcbbf;
+            color: white;
+            padding: 10px 20px;
+            cursor: pointer;
+            border: none;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <img src="https://tootsweet.twic.pics/cdm/customer-logos/641dba3de04d5701570eec59.jpg?twic=v1/resize=-x140" alt="Logo" class="logo">
+        <h1>Coupon Cadeau</h1>
+    </header>
+
+    <div class="main-content">
+        <div class="coupon-text">
+            <p>Gagné le 18/10/2023 @ Delforge, Rue Joffre 11, 4000 Liège, Belgium (expire le 18/11/2023 à 00h59)</p>
+        </div>
+
+        <button class="coupon-button" onclick="openPopup()">RÉCUPÉRER MON CADEAU</button>
+
+        <div class="conditions-text">
+            <p><strong>Conditions de récupération</strong></p>
+            <p>Coupon valable sous réserve de consommation.</p>
+        </div>
+
+        <div class="coupon-text">
+            <p><strong>Description</strong></p>
+            <p>Stand Delforge sur la foire de Liège face à la pieuvre.</p>
+        </div>
+
+        <div class="reference-text">
+            <p>Référence : F62RHJ6</p>
+        </div>
+    </div>
+
+    <!-- Pop-up -->
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <input type="text" id="codeInput" class="popup-input" placeholder="Entrez le code">
+            <button class="popup-button" onclick="validateCode()">Valider</button>
+        </div>
+    </div>
+
+    <script>
+        function openPopup() {
+            document.getElementById('popup').style.display = 'block';
+        }
+
+        function validateCode() {
+            // Code de validation (peu importe, il est toujours correct)
+            // Afficher un message de remerciement avec la référence
+            alert('Merci! Votre cadeau a été récupéré.\nRéférence: F62RHJ6');
+            // Réinitialiser la page
+            location.reload();
+        }
+    </script>
+</body>
+
+</html>
